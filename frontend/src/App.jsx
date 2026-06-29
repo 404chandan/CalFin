@@ -1,17 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Routes, Route, Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import LoginPage from "./pages/LoginPage";
+import HeroSection from "./components/HeroSection";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Layout() {
   return (
     <>
-      <h1>Welcome to the CalFin</h1>
+      <NavBar />
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Route>
+    </Routes>
+  );
+}
+
+export default App;
