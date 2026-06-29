@@ -3,7 +3,7 @@ import LoginPage from "../pages/LoginPage";
 
 function NavBar() {
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-sm fixed top-0 left-0 w-full z-50">
+    <nav className="bg-white border-b border-gray-200 shadow-sm relative top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">

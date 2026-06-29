@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react'
 
-function LoginPage() {
+function SignUpPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="py-4 px-4 md:px-8 w-full">
@@ -9,15 +8,31 @@ function LoginPage() {
           <div className="border border-slate-300 rounded-lg p-6 max-w-md mx-auto shadow-sm md:p-8 lg:mx-0">
             <div className="mb-8">
               <h1 className="text-slate-900 text-3xl font-bold mb-4">
-                Sign in
+                Sign Up
               </h1>
               <p className="text-slate-600 text-base leading-relaxed">
-                Sign in to your account to access your dashboard and manage your
+                Sign up to your account to access your dashboard and manage your
                 projects.
               </p>
             </div>
 
             <form className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 text-slate-900 font-medium text-sm inline-block"
+                >
+                  Name
+                </label>
+                <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                  className="px-3 py-2.5 text-sm text-slate-900 rounded-md bg-white w-full outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                />
+              </div>
               <div>
                 <label
                   htmlFor="email"
@@ -83,28 +98,28 @@ function LoginPage() {
                   </span>
                 </label>
 
-                <a
+                {/* <a
                   href="#"
                   className="ml-auto text-sm font-medium text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
                 >
                   Forgot password?
-                </a>
+                </a> */}
               </div>
 
               <button
                 type="submit"
                 className="w-full py-2 px-3.5 text-sm rounded-md font-semibold cursor-pointer tracking-wide text-white border border-blue-600 bg-blue-600 hover:bg-blue-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
-                Sign in
+                Sign Up
               </button>
 
               <div className="text-slate-900 text-sm text-center">
-                Don't have an account?
+                Already have an account?
                 <a
-                  href="/signup"
+                  href="/login"
                   className="text-blue-700 hover:underline ml-1 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
                 >
-                  Create New Account
+                  Login
                 </a>
               </div>
             </form>
@@ -120,7 +135,7 @@ function LoginPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }
 
-export default LoginPage;
+export default SignUpPage
